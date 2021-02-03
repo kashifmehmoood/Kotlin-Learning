@@ -9,8 +9,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        // You can change variable values
         var name = "Xyz"
-        Toast.makeText(this, "My name is $name", Toast.LENGTH_SHORT).show()
+        name = "Some one else"
+        var age = 27
+        Toast.makeText(this, "My name is $name and age is $age", Toast.LENGTH_SHORT).show()
 
     }
 
