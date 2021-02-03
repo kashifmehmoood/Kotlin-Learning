@@ -6,12 +6,15 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+    enum class CalculatorModes {
+        None, Addition, Subtraction, Division, Multiplication
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-       var name = "Some one else"
-       tv_name.text="$name"
+        var mode = CalculatorModes.Addition
+        tv_name.text = "Calculator mode is $mode"
 
     }
 
