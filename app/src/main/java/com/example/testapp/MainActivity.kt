@@ -11,9 +11,22 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //Methods with parameters pass integer values
-        addNumbers(15, 20)
-        displayName("Xyz")
+        //Connect button to a methods
+        btn_add.setOnClickListener {
+            if(ed_firstValue.text.toString().isEmpty())
+            {
+                ed_firstValue.setError("Enter First Value..!")
+            }
+            else if(ed_secondValue.text.toString().isEmpty())
+            {
+                ed_secondValue.setError("Enter Second Value..!")
+            }
+            else
+            {
+                addNumbers(Integer.parseInt(ed_firstValue.text.toString()), Integer.parseInt(ed_secondValue.text.toString()))
+            }
+
+        }
 
     }
 
@@ -21,10 +34,5 @@ class MainActivity : AppCompatActivity() {
         var sum = num1 + num2
         tv_name.text = "The sum of two numbers are $sum"
     }
-
-    fun displayName(s: String) {
-        Toast.makeText(this, "My name is $s .", Toast.LENGTH_SHORT).show()
-    }
-
 
 }
