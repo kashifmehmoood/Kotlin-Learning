@@ -9,17 +9,21 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        //Conditional Statements boolean value
-        btn_compare.setOnClickListener {
-            if (isOn) {
-                isOn = false
-                tv_value.text = "On"
-            } else {
-                isOn = true
-                tv_value.text = "Off"
-            }
-
+        //Using Arrays
+        val buttons = arrayOf(btn_one, btn_two, btn_three)
+        buttons[0].setOnClickListener {
+            pressedButton(1)
         }
+        buttons[1].setOnClickListener {
+            pressedButton(2)
+        }
+        buttons[2].setOnClickListener {
+            pressedButton(3)
+        }
+    }
+
+    private fun pressedButton(i: Int) {
+        tv_value.text = "" + i
     }
 
 }
