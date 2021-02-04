@@ -6,52 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--    <Button
-            android:id="@+id/btn_one"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="30dp"
-            android:layout_toLeftOf="@id/btn_two"
-            android:text="One"
-            android:textAllCaps="false" />
-
-        <Button
-            android:id="@+id/btn_two"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:text="Two"
-            android:textAllCaps="false" />
-
-        <Button
-            android:id="@+id/btn_three"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="30dp"
-            android:layout_toRightOf="@id/btn_two"
-            android:text="Three"
-            android:textAllCaps="false" />-->
-    <EditText
-        android:id="@+id/ed_firstvalue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:hint="Enter First Value"
-        android:inputType="number" />
-
-    <EditText
-        android:id="@+id/ed_secondvalue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ed_firstvalue"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:hint="Enter Second Value"
-        android:inputType="number" />
 
     <Button
         android:id="@+id/btn_compare"
@@ -59,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:text="@string/compare"
+        android:text="Button"
         android:textAllCaps="false" />
 
     <TextView
