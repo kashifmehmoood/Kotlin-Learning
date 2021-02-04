@@ -11,12 +11,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        test()
+        //Simple methods without parametersg
+        addNumbers()
 
     }
 
-    fun test() {
-        tv_name.text = "Testing"
+    fun addNumbers() {
+        var num1 = 12
+        var num2 = 15
+        var sum = num1 + num2
+        tv_name.text = "The sum of two numbers are $sum"
     }
 
 
