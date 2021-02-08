@@ -5,7 +5,7 @@ import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
 
 enum class CalculatorMode {
-    Addition, Subtraction, None
+    Addition, Subtraction, Multiply, None
 }
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +18,9 @@ class MainActivity : AppCompatActivity() {
         }
         btn_sub.setOnClickListener {
             currentMode = CalculatorMode.Subtraction
+        }
+        btn_multiply.setOnClickListener {
+            currentMode = CalculatorMode.Multiply
         }
         btn_equals.setOnClickListener {
             if (ed_firstvalue.text.toString().isEmpty()) {
@@ -37,6 +40,7 @@ class MainActivity : AppCompatActivity() {
         var total = when (currentMode) {
             CalculatorMode.Addition -> num1 + num2
             CalculatorMode.Subtraction -> num1 - num2
+            CalculatorMode.Multiply -> num1 * num2
             CalculatorMode.None -> {
                 tv_value.text = "No modes Selected"
                 return
